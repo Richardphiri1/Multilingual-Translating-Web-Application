@@ -2,7 +2,6 @@
 
 A beautiful, responsive web application that translates text between 30+ languages including all major Zambian languages. Built with vanilla HTML, CSS, and JavaScript.
 
-![Translator App Screenshot](https://via.placeholder.com/800x400?text=Translator+App+Screenshot)
 
 ## ✨ Features
 
