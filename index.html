@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate - Multilingual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="dark-mode-btn" id="darkBtn">🌙</button>
+
+        <div class="header">
+            <select id="sourceLang">
+                <option value="auto">🔍 Detect Language</option>
+                <optgroup label="🌍 Major Languages">
+                    <option value="en" selected>🇬🇧 English</option>
+                    <option value="fr">🇫🇷 French</option>
+                    <option value="es">🇪🇸 Spanish</option>
+                    <option value="de">🇩🇪 German</option>
+                    <option value="it">🇮🇹 Italian</option>
+                    <option value="pt">🇵🇹 Portuguese</option>
+                </optgroup>
+                <optgroup label="🇿🇲 Zambian Languages">
+                    <option value="bem">🇿🇲 Bemba (Chibemba)</option>
+                    <option value="nya">🇿🇲 Chewa (Nyanja)</option>
+                    <option value="tum">🇿🇲 Tumbuka</option>
+                    <option value="loz">🇿🇲 Lozi (Silozi)</option>
+                    <option value="lue">🇿🇲 Lunda</option>
+                    <option value="luv">🇿🇲 Luvale</option>
+                    <option value="kaonde">🇿🇲 Kaonde</option>
+                    <option value="tonga">🇿🇲 Tonga (Chitonga)</option>
+                    <option value="lamba">🇿🇲 Lamba</option>
+                    <option value="mambwe">🇿🇲 Mambwe</option>
+                    <option value="nsenga">🇿🇲 Nsenga</option>
+                    <option value="cokwe">🇿🇲 Chokwe</option>
+                    <option value="bisa">🇿🇲 Bisa</option>
+                    <option value="mbunda">🇿🇲 Mbunda</option>
+                    <option value="lala">🇿🇲 Lala</option>
+                    <option value="swa">🇿🇲 Swahili</option>
+                </optgroup>
+                <optgroup label="🌏 Asian Languages">
+                    <option value="ja">🇯🇵 Japanese</option>
+                    <option value="ko">🇰🇷 Korean</option>
+                    <option value="zh">🇨🇳 Chinese</option>
+                    <option value="hi">🇮🇳 Hindi</option>
+                </optgroup>
+                <optgroup label="🌎 Other Languages">
+                    <option value="ru">🇷🇺 Russian</option>
+                    <option value="ar">🇸🇦 Arabic</option>
+                </optgroup>
+            </select>
+
+            <button class="swap-btn" id="swapBtn">↔</button>
+
+            <select id="targetLang">
+                <optgroup label="🌍 Major Languages">
+                    <option value="en" selected>🇬🇧 English</option>
+                    <option value="fr">🇫🇷 French</option>
+                    <option value="es">🇪🇸 Spanish</option>
+                    <option value="de">🇩🇪 German</option>
+                    <option value="it">🇮🇹 Italian</option>
+                    <option value="pt">🇵🇹 Portuguese</option>
+                </optgroup>
+                <optgroup label="🇿🇲 Zambian Languages">
+                    <option value="bem">🇿🇲 Bemba (Chibemba)</option>
+                    <option value="nya">🇿🇲 Chewa (Nyanja)</option>
+                    <option value="tum">🇿🇲 Tumbuka</option>
+                    <option value="loz">🇿🇲 Lozi (Silozi)</option>
+                    <option value="lue">🇿🇲 Lunda</option>
+                    <option value="luv">🇿🇲 Luvale</option>
+                    <option value="kaonde">🇿🇲 Kaonde</option>
+                    <option value="tonga">🇿🇲 Tonga (Chitonga)</option>
+                    <option value="lamba">🇿🇲 Lamba</option>
+                    <option value="mambwe">🇿🇲 Mambwe</option>
+                    <option value="nsenga">🇿🇲 Nsenga</option>
+                    <option value="cokwe">🇿🇲 Chokwe</option>
+                    <option value="bisa">🇿🇲 Bisa</option>
+                    <option value="mbunda">🇿🇲 Mbunda</option>
+                    <option value="lala">🇿🇲 Lala</option>
+                    <option value="swa">🇿🇲 Swahili</option>
+                </optgroup>
+                <optgroup label="🌏 Asian Languages">
+                    <option value="ja">🇯🇵 Japanese</option>
+                    <option value="ko">🇰🇷 Korean</option>
+                    <option value="zh">🇨🇳 Chinese</option>
+                    <option value="hi">🇮🇳 Hindi</option>
+                </optgroup>
+                <optgroup label="🌎 Other Languages">
+                    <option value="ru">🇷🇺 Russian</option>
+                    <option value="ar">🇸🇦 Arabic</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="boxes">
+            <div class="box">
+                <textarea id="inputText" maxlength="500" placeholder="Enter text to translate...">Hello, how are you</textarea>
+                <div class="controls">
+                    <div>
+                        <button class="btn-small" id="speakInput">🔊</button>
+                        <button class="btn-small" id="copyInput">📋</button>
+                        <button class="btn-small" id="clearInput">🗑️</button>
+                    </div>
+                    <span id="charCount">18/500</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <textarea id="outputText" readonly placeholder="Translation will appear here..."></textarea>
+                <div class="controls">
+                    <div>
+                        <button class="btn-small" id="speakOutput">🔊</button>
+                        <button class="btn-small" id="copyOutput">📋</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="translateBtn">Translate</button>
+    </div>
+
+    <div class="toast" id="toast">Copied!</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
